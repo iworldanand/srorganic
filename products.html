@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Products | SR Organic</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Shared Header -->
+    <header id="header">
+        [Same header as above]
+    </header>
+
+    <!-- Products Page Content -->
+    <main class="products-page">
+        <section class="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>All Organic Products</h2>
+                    <p>Explore our complete range of natural products</p>
+                </div>
+                <div class="product-grid" id="productGrid">
+                    <!-- JavaScript will load all products here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer id="contact">
+        [Your existing footer]
+    </footer>
+
+    <script>
+        // Modified to load ALL products
+        function loadAllProducts() {
+            const allProducts = [
+                // Face Care
+                {id:'fc1', name:'Kumkumadi Sevum', category:'face-care', price:'₹400', image:'images/kumkumadi_sevum.jpg'},
+                // Hair Care
+                {id:'hc1', name:'Amla Shampoo', category:'hair-care', price:'₹200', image:'images/amla_shampoo.jpg'},
+                // ... all other products
+            ];
+            
+            const grid = document.getElementById('productGrid');
+            allProducts.forEach(product => {
+                grid.appendChild(createProductCard(product));
+            });
+        }
+        loadAllProducts();
+    </script>
+</body>
+</html>

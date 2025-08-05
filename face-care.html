@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Care | SR Organic</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Shared Header -->
+    
+    <!-- Category-specific content -->
+    <main class="category-page">
+        <section class="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Face Care Products</h2>
+                    <p>Natural solutions for glowing skin</p>
+                </div>
+                <div class="product-grid" id="faceCareGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared Footer -->
+
+    <script>
+        function loadFaceCare() {
+            const faceProducts = [
+                {id:'fc1', name:'Kumkumadi Sevum', price:'₹400', image:'images/kumkumadi_sevum.jpg'},
+                {id:'fc2', name:'Face Scrub Powder', price:'₹150', image:'images/scrub_powder.jpg'},
+                // ... other face care products
+            ];
+            
+            const grid = document.getElementById('faceCareGrid');
+            faceProducts.forEach(product => {
+                grid.appendChild(createProductCard(product));
+            });
+        }
+        loadFaceCare();
+    </script>
+</body>
+</html>
